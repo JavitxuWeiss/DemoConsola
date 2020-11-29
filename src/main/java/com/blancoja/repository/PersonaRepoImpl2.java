@@ -8,14 +8,14 @@ import org.springframework.stereotype.Repository;
 import com.blancoja.demo.DemoConsolaApplication;
 
 @Repository
-@Qualifier("persona1")
-public class PersonaRepoImpl implements IPersonaRepo{
+@Qualifier("persona2")
+public class PersonaRepoImpl2 implements IPersonaRepo{
 	
 	private static Logger LOG = LoggerFactory.getLogger(DemoConsolaApplication.class);
 
 	@Override
 	public void registrar(String nombre) {
-		LOG.info("SE REGISTRO A " + nombre);
+		LOG.info("NO SE REGISTRO A " + nombre);
 		
 	}
 
