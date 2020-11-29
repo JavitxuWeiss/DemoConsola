@@ -1,16 +1,21 @@
 package com.blancoja.service;
 
-import com.blancoja.repository.IPersonaRepo;
-import com.blancoja.repository.PersonaRepoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.blancoja.repository.IPersonaRepo;
+
+
+@Service
 public class PersonaServiceImpl implements IPersonaService{
 
-	IPersonaRepo repo;
+	@Autowired
+	private IPersonaRepo repo;
 	
 	
 	@Override
 	public void registrar(String nombre) {
-		repo= new PersonaRepoImpl();
+
 		repo.registrar(nombre);
 		
 	}
